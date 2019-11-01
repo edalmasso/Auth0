@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/edalmasso/Auth0.svg?branch=master)](https://travis-ci.com/edalmasso/Auth0)
+
 # Smart Apartment Data Api
 
 ## Features:
