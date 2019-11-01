@@ -4,3 +4,9 @@ mono: none
 dotnet: 2.2.402
 script:
  - dotnet restore
+install:
+  - nuget restore SmartAparmentData.sln
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - msbuild /p:Configuration=Release SmartAparmentData.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./SmartAparmentData.Api.Tests/bin/Release/SmartAparmentData.Api.Tests.dll
